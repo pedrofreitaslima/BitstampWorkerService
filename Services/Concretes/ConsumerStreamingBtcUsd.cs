@@ -1,5 +1,7 @@
 using System.Net.WebSockets;
 using System.Text;
+using System.Text.Json;
+using BitsmapWorkerService.Domain.Entities;
 using BitsmapWorkerService.Services.Abstraction;
 
 namespace BitsmapWorkerService.Services.Concretes;
@@ -35,7 +37,22 @@ public class ConsumerStreamingBtcUsd : IConsumeStreaming
             if (result.MessageType == WebSocketMessageType.Close)
                 await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, null, CancellationToken.None);
             else
-                Console.WriteLine(Encoding.ASCII.GetString(buffer, 0, result.Count));
+            {
+                string dataStream = Encoding.ASCII.GetString(buffer, 0, result.Count);
+                LiveOrderBook liveOrderBook = JsonSerializer.Deserialize<LiveOrderBook>(dataStream) ?? throw new InvalidOperationException();
+                await DisplayDataAnalytics();
+                await PersistData();
+            }
         }
+    }
+    
+    private async Task DisplayDataAnalytics()
+    {
+        await Task.CompletedTask;
+    }
+    
+    private async Task PersistData()
+    {
+        await Task.CompletedTask;
     }
 }

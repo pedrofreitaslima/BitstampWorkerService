@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitsmapWorkerService", "BitsmapWorkerService.csproj", "{A13CB6E0-951A-4C23-BA96-3F9D794BD415}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitstampWorkerService", "BitstampWorkerService.csproj", "{0B3A131A-EC66-4A9C-92FB-FE5191270E59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A13CB6E0-951A-4C23-BA96-3F9D794BD415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A13CB6E0-951A-4C23-BA96-3F9D794BD415}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A13CB6E0-951A-4C23-BA96-3F9D794BD415}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A13CB6E0-951A-4C23-BA96-3F9D794BD415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B3A131A-EC66-4A9C-92FB-FE5191270E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3A131A-EC66-4A9C-92FB-FE5191270E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3A131A-EC66-4A9C-92FB-FE5191270E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3A131A-EC66-4A9C-92FB-FE5191270E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -7,8 +7,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
         services.AddHostedService<Worker>();
-        services.AddSingleton<IConsumeStreaming,ConsumerStreamingBtcUsd>();
-        services.AddSingleton<IConsumeStreaming,ConsumerStreamingEthUsd>();
+        services.AddSingleton<IConsumeStreaming,ConsumerStreaming>();
         services.AddTransient<ClientWebSocket>();
     })
     .Build();

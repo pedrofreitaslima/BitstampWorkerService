@@ -1,9 +1,16 @@
+using System.Text.Json.Serialization;
+
 namespace BitsmapWorkerService.Domain.Entities;
 
-public sealed record LiveOrderBook(
-    Bid[] bids, //List of top 100 bids.
-    Ask[] asks, //List of top 100 asks.
-    string timestamp, //Order book timestamp.
-    string microtimestamp //Order book microtimestamp
-);
+public sealed class LiveOrderBook
+{   
+    [JsonPropertyName("bids")]
+    public IEnumerable<string[]> Bids { get; set; } //List of top 100 bids.
+    [JsonPropertyName("asks")]
+    public IEnumerable<string[]> Asks { get; set; }//List of top 100 asks.
+    [JsonPropertyName("timestamp")]
+    public string Timestamp { get; set; } //Order book timestamp.
+    [JsonPropertyName("microtimestamp")]
+    public string Microtimestamp { get; set; } //Order book microtimestamp
+}
 	
